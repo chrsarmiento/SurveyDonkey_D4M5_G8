@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SurveyDonkey</string>
+    <string name="start">start</string>
+    <string name="q1_favorite_color">¿Cuál es tu color favorito?</string>
+    <string name="q2_favorite_material">¿Cuál es tu material favorito?</string>
+    <string name="q3_favorite_material_band">¿Qué color preferirías en la correa del reloj?</string>
+    <string name="q4_suggestions">Sugerencias para la tienda</string>
+    <string name="end_results">Resultados:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
