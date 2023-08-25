@@ -25,6 +25,7 @@ class MainViewModel : ViewModel() {
      */
     fun addFirstAnswer(value: String): List<String> {
         firstAnswer.add(value)
+        firstAnswer = ArrayList(firstAnswer.distinct())
         return firstAnswer.distinct().sorted().toList()
     }
 
@@ -35,7 +36,7 @@ class MainViewModel : ViewModel() {
         if (firstAnswer.contains(value)) {
             firstAnswer.remove(value)
         }
-        return firstAnswer.sorted().toList()
+        return firstAnswer.distinct().sorted().toList()
     }
 
     /**
@@ -44,6 +45,7 @@ class MainViewModel : ViewModel() {
      */
     fun addSecondAnswer(value: String): List<String> {
         secondAnswer.add(value)
+        secondAnswer = ArrayList(secondAnswer.distinct())
         return secondAnswer.distinct().sorted().toList()
     }
 
@@ -63,6 +65,7 @@ class MainViewModel : ViewModel() {
      */
     fun addThirdAnswer(value: String): List<String> {
         thirdAnswer.add(value)
+        thirdAnswer = ArrayList(thirdAnswer.distinct())
         return thirdAnswer.distinct().sorted().toList()
     }
 

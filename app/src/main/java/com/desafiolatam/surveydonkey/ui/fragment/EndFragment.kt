@@ -27,24 +27,20 @@ class EndFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tvFirstAnswer.text = viewModel.getFirstResult()
-        binding.tvSecondAnswer.text = viewModel.getSecondResult()
-        binding.tvThirdQuestion.text = viewModel.getThirdResult()
-        binding.tvUserEmail.text = viewModel.getUserEmail()
-        binding.tvUserSuggest.text = viewModel.getUserSuggest()
+        cargarDatos()
     }
 
     override fun onResume() {
         super.onResume()
-        binding.tvFirstAnswer.text = viewModel.getFirstResult()
-        binding.tvSecondAnswer.text = viewModel.getSecondResult()
-        binding.tvThirdQuestion.text = viewModel.getThirdResult()
-        binding.tvUserEmail.text = viewModel.getUserEmail()
-        binding.tvUserSuggest.text = viewModel.getUserSuggest()
+        cargarDatos()
     }
 
     override fun onPause() {
         super.onPause()
+        cargarDatos()
+    }
+
+    private fun cargarDatos(){
         binding.tvFirstAnswer.text = viewModel.getFirstResult()
         binding.tvSecondAnswer.text = viewModel.getSecondResult()
         binding.tvThirdQuestion.text = viewModel.getThirdResult()
